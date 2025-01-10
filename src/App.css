@@ -1,0 +1,208 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Styling for forms */
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4a90e2;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+/* Error message */
+p {
+  color: red;
+  text-align: center;
+}
+
+/* Navigation links */
+.lgRgLink {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.lgRgLink a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 10px;
+}
+
+.lgRgLink a:hover {
+  text-decoration: underline;
+}
+
+
+/* Navigation bar styles */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Title styles */
+nav h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* List styles */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* List items (navigation links) */
+ul li {
+  margin: 0;
+}
+
+/* Links styles */
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+/* Hover effect for links */
+ul li a:hover {
+  color: #1e90ff;
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  ul {
+    display: block;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+  }
+
+  ul li a {
+    font-size: 16px;
+  }
+}
+.success-message {
+  color: green;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+}
+
+.lgRgLink {
+  margin-top: 10px;
+}
