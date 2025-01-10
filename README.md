@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Project Setup Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Frontend (React)
 
-## Available Scripts
+### 1.1 Clone the frontend repository
 
-In the project directory, you can run:
+Navigate to the `frontend` folder and install the dependencies:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1.2 Run the React app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Start the React app:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm start
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The frontend will be available at `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- To access the login page: `http://localhost:3000/login`
+- To access the register page: `http://localhost:3000/register`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1.3 Proxy Setup
 
-### `npm run eject`
+- The frontend automatically communicates with the backend API via a proxy defined in `frontend/package.json` under the `"proxy"` field.
+- The API is available at `http://localhost:5000`, and the frontend will send requests to this URL for authentication and other actions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2. Backend (Node.js API)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2.1 Clone the backend repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Navigate to the `api` folder and install the dependencies:
 
-## Learn More
+cd api npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2.2 Set up the `.env` file
 
-### Code Splitting
+- In the `api` folder, create a `.env` file.
+- Add the MongoDB connection string and JWT secret in the `.env` file:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+MONGO_URI=your_mongo_connection_string_here JWT_SECRET=your_jwt_secret_here
 
-### Analyzing the Bundle Size
+- Replace `your_mongo_connection_string_here` with your MongoDB URI (use MongoDB Atlas or local MongoDB).
+- Replace `your_jwt_secret_here` with a JWT secret key.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2.3 Run the API server
 
-### Making a Progressive Web App
+Start the backend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The API will be available at `http://localhost:5000`.
 
-### Deployment
+- Register new users at `POST /api/users/register`
+- Log in users at `POST /api/users/login`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 3. How to Change MongoDB Connection String
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you need to update the MongoDB connection string in your backend:
+
+1. Open the `.env` file in the `api` folder.
+2. Replace the value of the `MONGO_URI` environment variable with the desired MongoDB connection string.
+
+
+
+
